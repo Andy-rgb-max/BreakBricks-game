@@ -1,0 +1,23 @@
+body {
+    padding: 0;
+    text-align: center;
+}
+
+#game-intro {
+    padding: 0;
+}
+
+#game-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.left {
+    display: flex;
+    justify-content: center;
+}
+
+#game-screen {
+    display: none;
+}
