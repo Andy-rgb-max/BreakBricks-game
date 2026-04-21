@@ -1,23 +1,154 @@
 body {
     padding: 0;
+    margin: 0;
     text-align: center;
 }
 
 #game-intro {
     padding: 0;
+    position: relative;
+    display: block;
+    overflow: hidden;
+    width: 100%;
+}
+
+.BreakBricks-img {
+    display: block;
+    width: 100%;
+}
+
+.start-container {
+    position: absolute;
+    left: 50%;
+    bottom: 35%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+#start-btn {
+    width: 35%;
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+}
+
+#start-btn img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.start-text {
+    color: white;
+    font-family: monospace;
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 12px;
+    max-width: 80%;
+    margin: 0;
 }
 
 #game-container {
     display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-}
-
-.left {
-    display: flex;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
 }
 
 #game-screen {
     display: none;
+    position: relative;
+    width: 500px;
+    height: 600px;
+    overflow: hidden;
+    margin: 20px auto;
+    background-image: url(../images/bg2.png);
+    background-size: cover;
+    background-position: center;
+    border: 2px solid #333;
+}
+
+.container {
+    position: absolute;
+    top: 10px;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    box-sizing: border-box;
+    z-index: 10;
+}
+
+.left {
+    color: red;
+    font-family: monospace;
+    text-transform: uppercase;
+}
+
+.right {
+    display: flex;
+    gap: 8px;
+}
+
+.right img.heart-logo {
+    width: 30px;
+    height: auto;
+}
+
+#game-end {
+    position: relative;
+    display: none;
+    width: 100%;
+}
+
+.endgame-logo {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+#final-score {
+    position: absolute;
+    left: 50%;
+    top: 48%;
+    transform: translateX(-50%);
+    margin: 0;
+    color: #ff4df8;
+    font-family: monospace;
+    font-size: clamp(28px, 4vw, 64px);
+    font-weight: bold;
+    text-shadow:
+        0 0 5px #ff00ff,
+        0 0 10px #a100ff;
+    z-index: 5;
+}
+
+#restart-btn {
+    position: absolute;
+    bottom: 20%;
+    left: 50%;
+    background: none;
+    border: none;
+    transform: translateX(-50%);
+    cursor: pointer;
+    width: 15%;
+    z-index: 5;
+}
+
+#restart-btn img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.player,
+.ball,
+.brick {
+    position: absolute;
+    user-select: none;
 }
