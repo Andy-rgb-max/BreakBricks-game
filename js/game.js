@@ -32,11 +32,14 @@ class Game {
         this.hitSound = new Audio("../sounds/beep.wav");
         this.breakSound = new Audio("../sounds/boop.wav");
         this.backgroundMusic = new Audio("../sounds/game.wav");
+        this.endSound = new Audio("../sounds/end.wav");
 
         this.hitSound.volume = 0.6;
         this.breakSound.volume = 0.7;
-        this.backgroundMusic.volume = 0.35;
+        this.backgroundMusic.volume = 0.3;
         this.backgroundMusic.loop = true;
+        this.endSound.volume = 0.5;
+
     }
 
     start() {
@@ -294,6 +297,11 @@ class Game {
 
         if (this.lives <= 0) {
             this.gameIsOver = true;
+            
+            this.backgroundMusic.pause();
+            this.backgroundMusic.currentTime = 0;
+            this.playEffectSound(this.endSound);
+
             return;
         }
 
