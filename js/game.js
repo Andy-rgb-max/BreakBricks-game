@@ -36,7 +36,7 @@ class Game {
 
         this.hitSound.volume = 0.6;
         this.breakSound.volume = 0.7;
-        this.backgroundMusic.volume = 0.2;
+        this.backgroundMusic.volume = 0.05;
         this.backgroundMusic.loop = true;
         this.endSound.volume = 0.5;
 
