@@ -12,7 +12,7 @@ class Player {
 
         this.element = document.createElement("img");
         this.element.className = "player";
-        this.element.src = "../images/Paddle.png";
+        this.element.src = "./images/Paddle.png";
 
         this.element.style.width = this.width + "px";
         this.element.style.height = this.height + "px";
