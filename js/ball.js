@@ -19,7 +19,7 @@ class Ball {
 
         this.element = document.createElement("img");
         this.element.className = "ball";
-        this.element.src = "../images/Ball.png";
+        this.element.src = "./images/Ball.png";
 
         this.element.style.width = this.size + "px";
         this.element.style.height = this.size + "px";
