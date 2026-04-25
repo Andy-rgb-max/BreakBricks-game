@@ -29,14 +29,14 @@ class Game {
         this.playerStartLeft = (this.width / 2) - (this.playerWidth / 2);
         this.playerStartTop = this.height - 40;
 
-        this.hitSound = new Audio("../sounds/beep.wav");
-        this.breakSound = new Audio("../sounds/boop.wav");
-        this.backgroundMusic = new Audio("../sounds/game.wav");
-        this.endSound = new Audio("../sounds/end.wav");
+        this.hitSound = new Audio("./sounds/beep.wav");
+        this.breakSound = new Audio("./sounds/boop.wav");
+        this.backgroundMusic = new Audio("./sounds/game.wav");
+        this.endSound = new Audio("./sounds/end.wav");
 
         this.hitSound.volume = 0.6;
         this.breakSound.volume = 0.7;
-        this.backgroundMusic.volume = 0.3;
+        this.backgroundMusic.volume = 0.2;
         this.backgroundMusic.loop = true;
         this.endSound.volume = 0.5;
 
@@ -111,20 +111,20 @@ class Game {
 
         const brickRows = [
             {
-                fluo: "../images/Vert fluo.png",
-                normal: "../images/Vert.png"
+                fluo: "./images/Vert fluo.png",
+                normal: "./images/Vert.png"
             },
             {
-                fluo: "../images/Orange fluo.png",
-                normal: "../images/Orange.png"
+                fluo: "./images/Orange fluo.png",
+                normal: "./images/Orange.png"
             },
             {
-                fluo: "../images/jaune fluo.png",
-                normal: "../images/jaune.png"
+                fluo: "./images/jaune fluo.png",
+                normal: "./images/jaune.png"
             },
             {
-                fluo: "../images/Bleu fluo.png",
-                normal: "../images/Bleu.png"
+                fluo: "./images/Bleu fluo.png",
+                normal: "./images/Bleu.png"
             }
         ];
 
